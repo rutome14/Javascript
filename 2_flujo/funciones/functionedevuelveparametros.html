@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones que devuelven parametros</title>
+</head>
+
+<body>
+
+    <script>
+
+        //existe dos tipos de funciones procedimientos y funciones
+        //procedimientos son aquellas funciones que pintan el resultado
+        //funciones solo realizan el calculo pero no pintan nada, este tipo de funciones son las mas reutilizables.
+
+        function restar(pNumero1, pNumero2) {
+            let resultado = pNumero1 - pNumero2;
+
+            return resultado;
+            //despue del return no pongais nada por que es como si no existiera.
+        }
+
+        //siempre que una funcion retorno un valor debemos igualar dicho funcion a una variable de tal forma que almacenemos el valor devuelto.
+
+        var minumerito = 25;
+        let resultadoRuben = restar(minumerito, 7)
+        console.log(resultadoRuben)
+
+
+
+
+        var numeroStr = "5";
+        var numero = parseInt(numeroStr)
+
+
+    </script>
+
+
+</body>
+
+</html>

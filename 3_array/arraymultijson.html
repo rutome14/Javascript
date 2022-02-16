@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multidimensional</title>
+</head>
+
+<body>
+
+    <!-- <article>
+        <h3>Nombre Completo</h3>
+        <ul>
+            <li>Edad: 39</li>
+            <li>Nota Media: 10</li>
+        </ul>
+    </article>
+    <hr> -->
+    <script>
+
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan Antonio',
+                apellido: 'Perez',
+                edad: 39,
+                notamedia: 10
+            },
+            {
+                nombre: 'Carlos',
+                apellido: 'Roldan',
+                edad: 29,
+                notamedia: 5
+            },
+            {
+                nombre: 'Sarai',
+                apellido: 'Ruiz',
+                edad: 20,
+                notamedia: 3
+            },
+            {
+                nombre: 'Celia',
+                apellido: 'Ruiz',
+                edad: 27,
+                notamedia: 7
+            },
+            {
+                nombre: 'Andres',
+                apellido: 'Diaz',
+                edad: 46,
+                notamedia: 1
+            }
+        )
+
+        //console.log(listaAlumnos[3].nombre) //Celia
+        //console.log(listaAlumnos[0]['notamedia']) //10
+
+        function pintarAlumnos(pListaAlumnos) {
+            for (let alumno of pListaAlumnos) {
+                pintarUnAlumno(alumno);
+            }
+        }
+
+
+        function pintarUnAlumno(pAlumno) {
+            document.write(`<article>
+                            <h3>${pAlumno.nombre} ${pAlumno.apellido}</h3>
+                            <ul>
+                                <li>Edad: ${pAlumno.edad}</li>
+                                <li>Nota Media: ${pAlumno.notamedia}</li>
+                            </ul>
+                        </article>
+                        <hr>`)
+        }
+
+        //pintarAlumnos(listaAlumnos);
+
+
+        //pintarUnAlumno({ nombre: 'Camino', apellido: '', edad: 33, notamedia: 5 })
+
+
+
+
+        //sacar una lista de alumnos suspensos
+        function filtrarPorNota(pListaAlumnos, pNotaMin, pNotaMax) {
+            const listaFiltrada = new Array();
+            for (let alumno of pListaAlumnos) {
+                if (alumno.notamedia >= pNotaMin && alumno.notamedia <= pNotaMax) {
+                    let posicion = listaFiltrada.length;
+                    listaFiltrada[posicion] = alumno;
+                }
+            }
+            return listaFiltrada
+        }
+
+        let listaSuspensos = filtrarPorNota(listaAlumnos, 0, 4.99);
+        let listaAprobados = filtrarPorNota(listaAlumnos, 5, 10);
+
+        console.log('suspensos', listaSuspensos);
+        console.log('aprobados', listaAprobados)
+
+        pintarAlumnos(listaSuspensos)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

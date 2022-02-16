@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones del lenguaje</title>
+</head>
+
+<body>
+
+    <script>
+
+        var usuario = 'Celia Ruiz';
+
+        // case sensitive -> Juan != JUAN
+
+        var usuarioMayuscula = usuario.toUpperCase() // CELIA RUIZ
+        var usuarioMiniscula = usuario.toLowerCase() // celia ruiz
+
+        console.log(usuario, usuarioMiniscula)
+
+        var numero = prompt('Dime un numero en numerico'); //seis
+        numero = Number(numero);
+        console.log(typeof numero)
+        //sumar por 5;
+        var resultado = numero + 5;
+
+        console.log(resultado);
+
+        //metodo para convertir una cadena de caracter en un numero.
+        var numeroStr = "123.4";
+        var numero = parseInt(numeroStr) //123 number
+        var numero2 = parseFloat(numeroStr) //123.04 number
+        var numero3 = Number(numeroStr) //123.04 number
+        console.log(numero, numero2, numero3)
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //El ambito de bloque determina que una variable creada dentro cualquier estructura de flujo es de ambito local,.
+
+        //let y const tiene el mismo tipo de ambito es decir de bloque.
+
+        //son locales dentro de cualquier estructura {}
+
+        var ciudad = "Madrid" //global
+        let nombre = "pepe" //global
+        const PI = 3.14151617 //global
+
+        if (nombre === 'Pepe') {
+            var edad = 23 //global
+            let apellido = 'Lopez' //local
+            const gravedad = 9.8 //loca
+        }
+
+        // console.log(apellido) //error
+
+        for (var i = 1; i <= 10; i++) {
+            console.log(i)
+        }
+
+
+        for (let i = 0; i <= 10; i++) {
+            console.log(i + 'es ambito local');
+        }
+
+
+
+    </script>
+</body>
+
+</html>

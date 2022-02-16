@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //amp crea un array nuevo cuyo resultado es los elementos del array de origen a los que se le aplica un acción  sobre cada dato.
+
+        const listaNumeros = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        const dobles = listaNumeros.map(function (numero) {
+            return numero * 2
+        })
+
+        console.log(dobles);
+
+        const nombres = new Array('JuAn', 'PePe', 'LuCIA', 'ROCIO');
+
+        const listaNombresMinuscula = nombres.map(nombre => nombre.toLowerCase());
+
+        console.log(listaNombresMinuscula);
+
+
+    </script>
+</body>
+
+</html>

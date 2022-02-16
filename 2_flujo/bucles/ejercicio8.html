@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Escribir un programa para determinar si un número n es primo(un número primo sólo es divisible por el mismo y por la unidad).
+
+
+        var numero = parseInt(prompt('Dame un numero'));
+        var esPrimo = true;
+
+        for (var i = 2; i < numero; i++) {
+            if (numero % i === 0) {
+                esPrimo = false;
+            }
+        }
+
+        if (numero === 0 || numero === 1) {
+            esPrimo = false;
+        }
+
+        var resultado = (esPrimo) ? 'Es numero primo' : 'No es numero primo';
+
+        console.log(resultado);
+
+
+        //opcion amalia
+
+        var contador = 0;
+
+        for (var i = numero; i >= 1; i--) {
+            if (numero % i === 0) {
+                contador++
+            }
+        }
+
+        var resultado = (contador === 2) ? 'es primo' : 'no es primo';
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        function ordenarPorImportancia(pNumero, pTarea) {
+            console.log(`La tarea ${pTarea('Sacar al perro')} tengo que hacerla en ${pNumero} lugar`);
+        }
+
+        ordenarPorImportancia(1, function (pTitulo) {
+            return pTitulo;
+        })
+
+        //otro ejemplo
+        function saludar(pFn) {
+            console.log('Hola ' + pFn('Juan', 'Perez'))
+        }
+
+
+        saludar(function (pNombre, pApellido) {
+            return pNombre + " " + pApellido
+        })
+
+        //ejemplo 3
+
+        function realizarTrabajo(pTitulo, pAccion) {
+            if (pTitulo === "") {
+                pAccion('error no he podido terminar la tarea esta vacia')
+            }
+            else if (pTitulo === 'Sacar al perro') {
+                pAccion('Esta tarea no esta bien defina');
+            }
+            else {
+                pAccion('Tarea terminada')
+            }
+        }
+
+
+
+        /* realizarTrabajo('Montar el mueble', function (pMensaje) {
+            console.log(pMensaje);
+        }) */
+
+
+        realizarTrabajo('Sacar al perro', pMensaje => console.log(pMensaje))
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

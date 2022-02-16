@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Ajedrez</title>
+</head>
+
+<body>
+
+    <!-- <div class="tablero">
+        <div style="display: flex;">
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+        </div>
+
+        <div style="display: flex;">
+
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+        </div>
+
+        <div style="display: flex;">
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+        </div>
+
+        <div style="display: flex;">
+
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+            <div style="background-color: black; width: 100px; height: 100px;"></div>
+            <div style="background-color: red; width: 100px; height: 100px;"></div>
+        </div>
+    </div> -->
+
+    <script>
+
+        //quiero que pinteis un tablero de ajedrez donde las celdas van ser grises y negras.
+
+        //me pedireis por pantalla numero casillas y tamaño de la casilla
+
+        //el problema se divide en tres partes
+        //1 es construir una casilla
+        //2 es construir una fila - es que la fila tiene que poder elegir el color en el que empieza
+        //3 contruir el tablero
+
+
+        let numeroCasillas = parseInt(prompt('Dime un numero de casillas'));
+        let lado = prompt('Dime el tamaño de la casilla en pixeles');
+
+        function crearCasilla(pTamano, pColor) {
+            // aqui dentro voy a crear la casilla, pero no la voy pintar, por mi aplicación va tener un funcion de pintar el tablero.
+            let casilla = `<div style="background-color: ${pColor}; width: ${pTamano}px; height: ${pTamano}px;"></div>`;
+            return casilla;
+        }
+
+
+        function crearFila(pCantidad, pTamano, pColor1, pColor2) {
+            let fila = `<div style="display: flex;">`;
+            let color = "";
+            for (let i = 1; i <= pCantidad; i++) {
+                //color = (i % 2 !== 0) ? pColor1 : pColor2;
+                if (i % 2 !== 0) {
+                    color = pColor1
+                } else {
+                    color = pColor2
+                }
+                fila += crearCasilla(pTamano, color)
+            }
+            fila += `</div>`;
+            return fila;
+        }
+
+        function pintarTablero(pNumeroCasillas, pAnchoCasilla) {
+            let tablero = `<div class="tablero">`;
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                let colorInicial = (i % 2 !== 0) ? 'black' : 'gray';
+                let colorFinal = (i % 2 !== 0) ? 'gray' : 'black'
+                tablero += crearFila(pNumeroCasillas, pAnchoCasilla, colorInicial, colorFinal)
+            }
+            tablero += `</div>`;
+            document.write(tablero);
+        }
+
+        pintarTablero(numeroCasillas, lado)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

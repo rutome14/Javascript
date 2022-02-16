@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //filter es un metodo que me permite buscar uno a mas elementos dentro de un array de cualquier tipo, me devuelve un array de elementos
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Ruben',
+                edad: 29
+            },
+            {
+                nombre: 'Sara',
+                edad: 19
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: 9
+            }
+        )
+
+
+        /* const filtrarPorEdad =  (pLista, pEdadMin, pEdadMax) => {
+              const alumnosBuscados = pLista.filter(alumno => alumno.edad >= pEdadMin && alumno.edad <= pEdadMax);
+ 
+             return alumnosBuscados;
+         } */
+
+
+        function filtrarPorEdad(pLista, pEdadMin, pEdadMax) {
+
+            const alumnosBuscados = pLista.filter(alumno => alumno.edad >= pEdadMin && alumno.edad <= pEdadMax);
+
+            return alumnosBuscados;
+        }
+
+
+        let alumnosMayores30 = filtrarPorEdad(listaAlumnos, 30, 100)
+
+        let alumnosMenores10 = filtrarPorEdad(listaAlumnos, 0, 10);
+
+        console.log(alumnosMayores30);
+        console.log(alumnosMenores10);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

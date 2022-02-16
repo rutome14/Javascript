@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional Anidado</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+
+        Pedir una nota a traves de PROMPT
+
+        Mensajes a mostrar:
+            0-5 -> suspenso
+            5-6 -> suficiente
+            6-7 -> bien
+            7-9 -> notable
+            9-10 -> Sobresaliente
+            otro valor -> nota erronea
+
+        */
+
+        var nota = prompt('Dime tu nota en numero');
+        nota = Number(nota);
+
+        if (nota >= 0 && nota < 5) {
+            console.log('suspenso')
+        } else if (nota >= 5 && nota < 6) {
+            console.log('suficiente')
+        } else if (nota >= 6 && nota < 7) {
+            console.log('bien')
+        } else if (nota >= 7 && nota < 9) {
+            console.log('notable')
+        } else if (nota >= 9 && nota <= 10) {
+            console.log('sobresaliente')
+        } else {
+            console.log('la nota no es valida');
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

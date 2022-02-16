@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //2 - Pedir por pantalla 3 numeros y visualizarlos por orden decreciente
+
+        let numero1 = Number(prompt('Dime primer numero'));
+        let numero2 = Number(prompt('Dime segundo numero'));
+        let numero3 = Number(prompt('Dime tercer numero'))
+
+
+        console.log('orden inicial', numero1, numero2, numero3)
+
+
+        function orderTresNumeros(pNumero1, pNumero2, pNumero3) {
+            let resultado = "";
+            if (pNumero1 > pNumero2 && pNumero1 > pNumero3) {
+                /* if (pNumero2 > pNumero3) {
+                     console.log('orden final', pNumero1, pNumero2, pNumero3)
+                 }
+                 else {
+                     console.log('ordern final', pNumero1, pNumero3, pNumero2)
+                 } */
+
+                resultado = (pNumero2 > pNumero3) ? `orden final: ${pNumero1}, ${pNumero2}, ${pNumero3}` : `orden final: ${pNumero1}, ${pNumero3}, ${pNumero2}`
+
+            } else if (pNumero2 > pNumero1 && pNumero2 > pNumero3) {
+                /* if (pNumero1 > pNumero3) {
+                    console.log('orden final', pNumero2, pNumero1, pNumero3)
+                }
+                else {
+                    console.log('orden final', pNumero2, pNumero3, pNumero1)
+                }
+                */
+                resultado = (pNumero1 > pNumero3) ? `orden final , ${pNumero2}, ${pNumero1}, ${pNumero3}` : `orden final , ${pNumero2}, ${pNumero3}, ${pNumero1}`;
+
+            } else if (pNumero3 > pNumero1 && pNumero3 > pNumero2) {
+                /*if (pNumero1 > pNumero2) {
+                    console.log('orden final', pNumero3, pNumero1, pNumero2)
+                } else {
+                    console.log('orden final', pNumero3, pNumero2, pNumero1)
+                }*/
+
+                resultado = (pNumero1 > pNumero3) ? `orden final , ${pNumero3}, ${pNumero1}, ${pNumero2}` : `orden final , ${pNumero3}, ${pNumero2}, ${pNumero1}`;
+            }
+            else {
+                resultado = "Estos datos no son correctos"
+            }
+            console.log(resultado)
+        }
+
+        orderTresNumeros(numero1, numero2, numero3)
+
+
+
+    </script>
+</body>
+
+</html>

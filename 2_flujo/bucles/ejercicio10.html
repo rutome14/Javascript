@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+
+<body>
+
+    <script>
+
+        //hacer un programa que solicite y visualice un serie de numeros distintos de cero. El programa me pidirá n numeros cuando instroduzcamos en numero 0 el programa parará y me sacara todos los numero instroducidos menos el cero.
+
+        var resultado = "";
+        var numero = ""
+
+        do {
+            numero = prompt('Dime un numero'); //'0'
+            if (numero !== "0") {
+                resultado += numero + " " // resultado = resultado  + numero;
+                // 7 19 3
+            }
+        } while (numero !== "0")
+
+
+        console.log(resultado);
+
+    </script>
+
+</body>
+
+</html>

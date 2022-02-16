@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <script>
+        //realizar un programa que me permita recibir dos numeros cualesquiera y me pregunte que tipo de operacion quiero hacer (suma, resta , multiplicacion).
+        //Posteriormente me pintará el resultado en el html con document.write
+
+
+        function calcular(pNumero1, pNumero2, pTipo) {
+            let resultado = 0;
+            let numero1 = pNumero1;
+            let numero2 = pNumero2;
+            switch (pTipo) {
+                case 'suma':
+                    //sumar
+                    resultado = sumar(numero1, numero2)
+                    break;
+
+                case 'resta':
+                    //restar
+                    resultado = restar(numero1, numero2)
+                    break;
+
+                case 'multiplicar':
+                    //multiplicar
+                    resultado = multiplicar(numero1, numero2)
+                    break;
+
+                case 'division':
+                    resultado = dividir(numero1, numero2)
+                    break;
+
+                default:
+                    console.log('operacion no valida')
+                    break;
+            }
+            //console.log(resultado);
+            pintarResultado(numero1, numero2, pTipo, resultado);
+        }
+
+        function sumar(pNumero1, pNumero2) {
+            let resultado = pNumero1 + pNumero2;
+            return resultado;
+        }
+
+
+        function restar(pNumero1, pNumero2) {
+            let resta = pNumero1 - pNumero2;
+            return resta;
+        }
+
+
+        function multiplicar(pNumero1, pNumero2) {
+            let multiplicacion = pNumero1 * pNumero2;
+            return multiplicacion;
+        }
+
+
+        function pintarResultado(pNumero1, pNumero2, pTipo, pResultado) {
+            document.write(`<h1>El resultado de ${pTipo} de ${pNumero1} y ${pNumero2} es ${pResultado}</h1>`)
+        }
+
+        function dividir(pNumero1, pNumero2) {
+            let resultado = pNumero1 / pNumero2
+            return resultado;
+        }
+
+
+        calcular(20, 20, 'division')
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

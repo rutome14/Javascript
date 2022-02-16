@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional Simple</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* 
+        Sintaxis:
+        ---------
+
+            if(CONDICION){
+                Sentencias a ejecutar si la condicion se cumple TRUE
+            }
+
+            Una estructura condional me permite tomar decisiones en mi codido.
+        */
+
+        const nota = 6;
+
+        if (nota >= 5) {
+            console.log('Aprobado');
+        }
+
+        //secuencia de escape
+
+        if (nota >= 5 && nota <= 10) {
+            console.log('Aprobado')
+        } else {
+            console.log('Suspenso')
+        }
+
+        //eficiencia
+
+        if (nota >= 0 && nota < 5) {
+            console.log('Suspendido')
+        } else {
+            console.log('error dato no valido');
+        }
+
+
+        if (nota >= 0 && nota < 5) {
+            console.log('Suspendido')
+        }
+
+        if (nota >= 5 && nota <= 10) {
+            console.log('Aprobado');
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

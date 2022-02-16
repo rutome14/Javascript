@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+
+<body>
+
+    <script>
+
+        // for of sirve para manejar array de cualquie tipo 
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito', 'Raton'];
+
+
+        let ul = '<div>';
+        for (let animal of animales) {
+            ul += `<p>${animal}</p>`
+        }
+        ul += '</div>'
+
+        document.write(ul)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

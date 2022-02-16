@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var nombre = 'Juan'
+        var apellido = 'Perez';
+        var i = 1;
+        var nombreCompleto = "<ul>";
+
+        while (i <= 20) {
+            nombreCompleto = nombreCompleto + `<li>${nombre} ${apellido}</li>`
+            i++;
+        }
+        nombreCompleto += '</ul>'
+
+        document.write(nombreCompleto)
+
+
+
+    </script>
+</body>
+
+</html>

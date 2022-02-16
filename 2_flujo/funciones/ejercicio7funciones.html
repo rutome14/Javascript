@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //Hacer un programa que visualice los 10 primeros múltiplos de un número que introducimos por teclado. A continuación nos visualice la suma de todos ellos.
+
+        let numero = parseInt(prompt('Dame un numero'))
+
+        function multiplos(pNumero) {
+            let multiplo = 0;
+            let suma = 0;
+            for (let i = 1; i <= 10; i++) {
+                multiplo = pNumero * i;
+                console.log(multiplo)
+                suma = suma + multiplo;
+            }
+            console.log(suma)
+        }
+
+        multiplos(numero);
+
+
+    </script>
+
+</body>
+
+</html>

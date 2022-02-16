@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //continue: lo que hace es salterse una iteracion, para excluir del resultado esas acciones, en determinadas condiciones.
+
+        var inicial = 1;
+        var numeroAleatorio = Math.trunc(Math.random() * 101); //5
+
+        //todos los numeros entre 1 y el aleatorio pero que no sean divibles
+
+        while (inicial <= numeroAleatorio) {
+
+            if (inicial % 3 === 0) {
+                inicial++;
+                continue;
+            }
+
+            console.log(inicial);
+            inicial++;
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

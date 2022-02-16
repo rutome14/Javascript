@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 bucles</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        //quiero pintar n cuadrados, siendo n un numero pedido por pantalla
+        //cada cuadrado tendrá dentro de si mismo un numero el que corresponde a su posicion.
+
+        //quiero que los cuadrados con numero par sean verdes y los impares rojos.
+
+        //paso 1 pintar n cuadrados de un color ✅
+        //paso 2 meter dentro de cada cuadrado su numero  ✅
+        //paso 3 cambiar el color dependiendo de su posicion par o impar. ✅
+
+
+        var numeroCuadrados = parseInt(prompt('Dime el numero de cuadrados'));
+
+        //console.log(typeof numeroCuadrados, numeroCuadrados)
+        for (var i = 1; i <= numeroCuadrados; i++) {
+            var color = (i % 2 !== 0) ? "tomato" : 'green'; //operador ternario 
+            document.write(`<div class="cuadrado" style="background-color: ${color}">${i}</div>`)
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

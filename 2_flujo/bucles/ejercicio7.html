@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        /*
+             - Escribir un programa donde el usuario elija entre lo siguiente ¿Qué desea cenar? Y pueda poner dos opciones Carne o Pescado
+             Y luego se le pregunte también si desea o no postre
+    
+                - Si eligió cenar Carne-> pago 23 €
+                - Si eligió cenar Pescado->pago 15 €
+                - Si tomo postre->el postre valió 3 €
+    
+                - Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario, incluyendo una propina del 6%
+            */
+        const precioCarne = 23;
+        const precioPescado = 15;
+        const precioPostre = 3;
+
+        var plato = prompt('¿Que desea cenar? carne o pescado').toLowerCase();
+        var postre = prompt('¿Va querer usted degustar postre? si o no').toLowerCase();
+
+        var precioPlato = (plato === 'carne') ? precioCarne : precioPescado;
+        var pvpPostre = 0;
+
+        if (postre === 'si') {
+            pvpPostre = precioPostre
+        } else {
+            pvpPostre = 0;
+        }
+
+        var costeTotal = precioPlato + pvpPostre + ((precioPlato + pvpPostre) * 6) / 100
+
+        document.write(costeTotal);
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH</title>
+</head>
+
+<body>
+
+    <script>
+
+        //me permite introducir elementos dentro de un array en la ultima posicion disponible, sirve para cualquier tipo de array. Introducir elementos por el final 
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito');
+
+        let animal = 'Cuervo';
+
+        //push devuelve la longitud nueva que tiene mi array despues de meter elemento.
+
+        let longitud = listaAnimales.push(animal, 'Hipopotamo');
+
+        console.log(listaAnimales)
+        console.log(longitud);
+
+
+    </script>
+
+</body>
+
+</html>

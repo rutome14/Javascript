@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos Basicos - variables</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //como se crea un variable
+        // 1- declaracion
+        var persona;
+        // 2 -inicializacion - dar valor a la varible
+        persona = 'Mario';
+
+        //tipado dinamico
+        var edad;
+        alert(typeof edad); //undefined
+        alert(edad * 2) //NaN no es un numero
+        edad = 'juan';
+
+        //en lenguajes como JAVA son lenguajes fuertemente tipados, Typescript
+        // var edad:number;
+        //edad = "Juan"
+
+        //cadenas de carecteres STRING
+
+        var calle = "Calle Gran vía";
+        var nombreAlumno = 'Juan Antonio';
+
+        var contenidoHtml = '<h1 class="rojo">Hola</h1>';
+
+        document.write(contenidoHtml);
+
+
+        //numeros - number
+        var edad = 39;
+        var media = 3.45;
+        var negativos = -3;
+
+        //Booleanos - true - false (1-0)
+        var esActivo = true //false
+
+        //undefined 
+
+        var apellido; // undefined
+
+
+        //Null, viene muy relacionado con asignacion de tipado y de dato.
+
+        var direccion = "Calle Badalona";
+        direccion = ""
+        direccion = null;
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

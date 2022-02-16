@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Pedir una cantidad de cuadrados, pedir ancho y situarlos en escalera
+
+        //paso 1 pintar en cuadrados en vertical en la medida marcada ✅
+        //paso 2 desplazar a la derecha los cuadrados el ancho del cuadrado anterior.
+
+        var numeroCuadrados = parseInt(prompt('Dime un numero de cuadrados'));
+        var ancho = parseInt(prompt('Dime un ancho'));
+
+
+
+        for (var i = 0; i < numeroCuadrados; i++) {
+
+            var margenLeft = ancho * i;
+
+            document.write(`<div style="background-color: tomato; width: ${ancho}px; height: ${ancho}px; margin-left: ${margenLeft}px;"></div>`)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

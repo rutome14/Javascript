@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div style="display: flex; flex-direction: column">
+        <div style="background-color: black; width: 100px; height: 100px; margin: 10px"></div>
+        <div style="background-color: black; width: 100px; height: 100px; margin: 10px"></div>
+        <div style="background-color: black; width: 100px; height: 100px; margin: 10px"></div>
+        <div style="background-color: black; width: 100px; height: 100px; margin: 10px"></div>
+        <div style="background-color: black; width: 100px; height: 100px; margin: 10px"></div>
+    </div> -->
+
+
+
+
+
+    <script>
+
+        //crear un script que me pinte n cuadrados de color alternos. Se pide el numero de cuadrados, el lado del cuadrado y el color. La funcion tiene que permitirme colocarlos en fila o en columna.
+
+        //paso 1 pintar un solo cuadrado ✅
+        //paso 2 pintar n cuadrados ✅
+        //paso 3 colocarlos en horinzol o vertical
+
+        function pintarUnCuadrado(pColor, pLado) {
+            let cuadrado = `<div style="background-color: ${pColor}; width: ${pLado}px; height: ${pLado}px; margin: 10px"></div>`;
+            return cuadrado;
+        }
+
+
+        function pintarNCuadrados(pCantidad, pColor, pLado, pDireccion) {
+            let fila = `<div style="display:flex; flex-direction: ${pDireccion}">`
+            for (let i = 1; i <= pCantidad; i++) {
+                let color = (i % 2 === 0) ? pColor : 'black';
+                let lado = pLado;
+                fila += pintarUnCuadrado(color, lado)
+            }
+
+            fila += '</div>'
+            document.write(fila);
+        }
+
+        pintarNCuadrados(10, 'tomato', 200, 'row')
+
+    </script>
+
+
+</body>
+
+</html>

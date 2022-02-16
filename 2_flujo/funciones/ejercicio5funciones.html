@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero una funcion que me pida que quiero desayunar y lo saque por pantalla.
+
+        function desayunar() {
+            let peticion = prompt('que quieres desayunar')
+            console.log('quiero desayunar ' + peticion)
+        }
+
+        function comer() {
+            let peticion = prompt('que quieres comer');
+            console.log('quiero comer ' + peticion)
+        }
+
+        function main(pPeticion) {
+            console.log('Buenos dias')
+            pPeticion()
+        }
+
+        main(desayunar)
+        main(comer)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //para mañana E7, E8, E11, E12
+
+        //Que lea 10 números por teclado, los almacene en un array y muestre la suma, resta, multiplicación y división de todos.
+
+        const arrayNumeros = new Array();
+
+        function cargarArray(pCantidad) {
+            while (pCantidad >= 1) {
+                let numero = parseInt(prompt('Dame un numero'))
+                arrayNumeros.push(numero)
+
+                pCantidad--;
+            }
+            console.log('suma', sumar(arrayNumeros));
+            //console.log('resta', restar(arrayNumeros));
+        }
+
+        function sumar(pArrayNumeros) {
+            let suma = 0;
+            for (let numero of pArrayNumeros) {
+                suma = suma + numero;
+            }
+
+            return suma;
+        }
+
+        cargarArray(5);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

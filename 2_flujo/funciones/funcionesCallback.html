@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de callback</title>
+</head>
+
+<body>
+
+    <script>
+
+        //una función de callback es un función que se pasa como parametro de otra.
+        //opcion 1 una funcion espera la ejecución de otra para lanzar su resultado
+
+        function saludar(pNombre) {
+            document.write(`<h1>Hola ${pNombre}</h1>`);
+        }
+
+        //imaginemos que tengo un funcion que consulta a BBDD y me devuelve el nombre de una persona.
+
+        function getNombre() {
+            let nombre = 'Carlos';
+            return nombre;
+        }
+
+        saludar(getNombre())
+
+        //opcion 2 funciones anonimas.
+
+        function calcular(pFunctionCallback) {
+            pFunctionCallback(3, 4)
+        }
+
+        calcular(function (pNumeroA, pNumeroB) {
+            console.log(pNumeroA + pNumeroB)
+        })
+
+        //opcion funcion flecha
+
+        calcular((pNumeroA, pNumeroB) => console.log(pNumeroA + pNumeroB))
+
+        calcular((pNumeroA, pNumeroB) => console.log(pNumeroA * pNumeroB))
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

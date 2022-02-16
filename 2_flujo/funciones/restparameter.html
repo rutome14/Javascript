@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // rest parameter es un funcion que me permite recibir parametros fijos en primer lugar, para despues considerar el resto de parametros un subconjunto o array.
+
+
+        function calcular(pTipo, ...numeros) {
+
+            //console.log(numeros); //numero es un lista - ARRAY
+            //console.log(pTipo);
+            let resultado = 0;
+
+            switch (pTipo) {
+                case 'sumar':
+                    //sumo
+                    resultado = sumar(numeros)
+                    break;
+
+                case 'multiplicar':
+                    //multiplico
+                    resultado = multiplicar(numeros)
+                    break;
+            }
+
+            console.log(resultado)
+        }
+
+        function sumar(pListaNumeros) {
+            let suma = 0;
+            for (let i = 0; i < pListaNumeros.length; i++) {
+                suma += pListaNumeros[i]
+            }
+            return suma;
+        }
+
+        function multiplicar(pListaNumeros) {
+            let multiplicacion = 1;
+            for (let i = 0; i < pListaNumeros.length; i++) {
+                multiplicacion *= pListaNumeros[i]
+            }
+            return multiplicacion;
+        }
+
+
+        calcular('sumar', 1, 2, 3, 4, 5, 6)
+        calcular('multiplicar', 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
+    </script>
+
+</body>
+
+</html>

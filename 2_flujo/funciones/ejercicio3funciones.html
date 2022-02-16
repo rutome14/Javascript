@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPV - terminal de punto de venta</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // 1000 -> 21% 
+        // 100%
+        // 2420
+        //vamos a una aplicacion que me permita calcular y sacar por pantalla PVP de un producto.
+
+
+        // PVP = (precioCompra  + margenBeneficio) + IVA
+
+        //la aplicaciones deber tener en cuenta que el iva puede cambiar y el margen tb pueden.
+
+        function calcularBeneficio(pPrecio, pPorcentaje) {
+            let resultado = (pPrecio * pPorcentaje) / 100
+            return resultado;
+        }
+
+        function calcularIva(pPrecio, pImpuesto) {
+            let resultado = (pPrecio * pImpuesto) / 100
+            return resultado
+        }
+
+        function calcularPVP(pPrecioCompra, pImpuesto, pMargen) {
+            let beneficio = calcularBeneficio(pPrecioCompra, pMargen);
+            let precioConMargen = pPrecioCompra + beneficio; //1500
+
+            let iva = calcularIva(precioConMargen, pImpuesto)
+            let pvp = precioConMargen + iva
+
+            console.log(pvp);
+        }
+
+        calcularPVP(1000, 21, 50);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

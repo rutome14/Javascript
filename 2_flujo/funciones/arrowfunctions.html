@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow functions</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //las funciones flecha es una forma abreviada de escribir una funcion anonima o expresiva/declarativa. QUE SOMOS UN PUTOS VAGOS. Me permite eveitar estructuras con muchas llaves evito hadeukencode/callbackHell. Hace mas legible mi codigo.
+
+        // como pasar una funcion anonima a funcion flecha sin dolor.
+
+        /*
+
+            paso 1: quito la palabra function y la sustituyo por una flecha (=>) y la situo detras del parentesis.
+
+            paso 2: solo si la funcion recibe un unico parametro puedo quitar los parentesis, si es cero a mas de uno no puedo quitarlos.
+
+            paso 3: si la funcion solo ejecuta una unica linea de acción dentro de la llaves puedo quitar dichas llaves. Y si esa acción es un return tambien puedo quitar el return
+
+        */
+
+
+        const sumar = function (pNumero1, pNumero2) {
+            let resultado = pNumero1 + pNumero2;
+            return resultado;
+        }
+
+        const sumita = (pNumero1, pNumero2) => pNumero1 + pNumero2;
+
+        let resultado = sumita(2, 5); // 7;
+
+        // vamos hacer en arrow function la media de dos numeros. Primero crear la funcion anonima.
+
+        const media = (pNumero1, pNumero2) => (pNumero1 + pNumero2 / 2)
+
+        console.log(media(5, 2));
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

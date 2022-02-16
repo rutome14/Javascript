@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de stock</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //necesito una aplicación que me permita controlar el stock de mi tienda de paraguas negros. Para ello necesito saber:
+
+        // Cuanto stock tengo de paraguas.
+        //Necesito poder añadir paraguas a mi stock
+        // Mi tienda tiene que poder vender paraguas
+        // necesito un sistema de notificaciones que me avise cuando me quedan pocos paraguas.(5 o menos)
+
+        //necesito algo para almacenar mi stock de paraguas, cantidad de paraguas.
+
+        let stock = 125;
+
+        //crear una funcion que me permitar mostrar el stock.
+        function mostrarStock() {
+            console.log(`Tu cantidad de stock es ${stock}`)
+        }
+
+
+        //necesito una funcion que me permita añadir stock a mi bbdd. La cantidad que yo quiera cada vez que ejecute la función. La funcion me devolverá la cantidad de stock global.
+
+        function addStock(pCantidad) {
+            stock = stock + pCantidad; // stock += pCantidad
+            mostrarStock();
+        }
+
+        //necesito algo que me permita a un usuario comprar paraguas, puede comprar los paraguas que quiera siempre que tengamos stock
+
+        function buyProduct(pCantidad) {
+            if (pCantidad > stock) {
+                return `No tengo sufiente stock para servirte, solo tengo ${stock}`
+            }
+            stock = stock - pCantidad;
+            comprobarStock()
+            return stock;
+        }
+
+
+        //necesito algo que me notifique cuando mi stock sea de 5 o menos.
+        //no solo hay que crear la accion si no saber cuando ejecutarla
+
+        function comprobarStock() {
+            const STOCK_MINIMO = 5;
+            if (stock <= STOCK_MINIMO) {
+                console.log('Tienes 5 paraguas o menos deberias comprar producto')
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

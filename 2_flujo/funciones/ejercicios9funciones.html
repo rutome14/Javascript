@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas. 
+
+        function comprobarCadena(pTexto) {
+            if (pTexto === pTexto.toUpperCase()) {
+                console.log('la cadena es en mayusculas')
+            } else if (pTexto === pTexto.toLowerCase()) {
+                console.log('la cande es en minusculas')
+            } else {
+                console.log('la cadena tiene mayusculas y minusculas')
+            }
+        }
+
+        //comprobarCadena('En un lugar de la Mancha')
+        //comprobarCadena('HOLA COMO ESTAS')
+        comprobarCadena('superfragilistico')
+
+
+
+    </script>
+
+</body>
+
+</html>

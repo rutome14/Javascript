@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //hacer programa que pida 10 numeros y me devuelva el total de la suma de solo los numeros impares.
+
+        function pedirNumeros(pCantidad) {
+            let suma = 0;
+            for (let i = 1; i <= pCantidad; i++) {
+                let numero = parseInt(prompt('Dime un numero'))
+                /*if (numero % 2 !== 0) {
+                    suma = suma + numero;
+                }*/
+                suma = (numero % 2 !== 0) ? suma + numero : suma;
+            }
+            console.log(suma)
+        }
+
+        pedirNumeros(10)
+
+
+    </script>
+
+</body>
+
+</html>

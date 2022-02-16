@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Ruben',
+                edad: 29
+            },
+            {
+                nombre: 'Sara',
+                edad: 19
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: 9
+            }
+        )
+
+        //foreach es un funcion que me permiter recorre un array igual que un for of o for i.
+
+        listaAlumnos.forEach(alumno => console.log(alumno.nombre))
+
+        let html = "";
+
+        listaAlumnos.forEach(function (alumno, index) {
+
+            let color = (index % 2 === 0) ? 'red' : 'green';
+
+            html += `<div>
+                <h3 style="color: ${color}">${index} - ${alumno.nombre}</h3>
+                <p>Edad: ${alumno.edad}</p>
+            </div>`
+        })
+
+        document.write(html);
+
+
+
+    </script>
+
+</body>
+
+</html>

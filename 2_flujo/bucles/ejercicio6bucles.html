@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero pintar un listado de numeros consecutivos desde el 1 hasta el 10
+        var listado = '<ul>'
+
+        for (var i = 1; i <= 10; i++) {
+            //listado = listado + `<li>${i}</li>`
+            listado += `<li>${i}</li>`
+        }
+
+        listado = listado + '</ul>';
+
+        document.write(listado);
+
+
+
+        /* WHILE*/
+
+        var j = 1;
+
+        var listadoWhile = '<ul>';
+
+        while (j <= 10) {
+            listadoWhile += `<li>${j}</li>`;
+            j++;
+        }
+
+        listadoWhile += '</ul>'
+
+        document.write(listadoWhile);
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

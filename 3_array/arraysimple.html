@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //un array es una lista de elementos de la misma clase. 
+
+        //const nombresAlumnos = []; //array vacio
+        const nombresAlumnos = new Array('Celia', 'Amalia', 'Andres', 'Ruben', 'Pascual', 'Isa');
+
+        console.log(nombresAlumnos)
+
+        //como saco la cantidad de elementos de una lista
+        console.log(nombresAlumnos.length);
+
+        //acceder al valor de los elementos de la lista debemos decirle la posicion del elemento
+        //sabiendo que una lista empieza en 0 y acaba en length - 1 (0 a n-1 siendo n la longitud)
+        console.log(nombresAlumnos[2]); //Andres
+
+
+        //vamos a pintar el listado de alumnos en un lista en html. 
+
+        // quiero que cada alumno se muestre de un color alternate rojo y green
+        function pintarAlumnos(pListaNombres) {
+
+            let ul = '<ul>';
+            for (let i = 0; i < pListaNombres.length; i++) {
+                let color = (i % 2 !== 0) ? 'red' : 'green';
+                ul += `<li style="color: ${color}">${pListaNombres[i]}</li>`
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+
+        pintarAlumnos(nombresAlumnos)
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // si cargamos javascript dentro head no tenemos acceso a modificar el html
+        alert("hola desde head");
+    </script>
+
+</head>
+
+<body>
+    <h1>Hola desde javascript</h1>
+
+
+
+    <script>
+        //siempre que necesite acceder a los elementos del html. Siempre al final de todo el html
+        var nombre = "Juan"
+        alert('estoy al final del body')
+
+    </script>
+    <script src="js/cargaexterna.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break y continue</title>
+</head>
+
+<body>
+
+    <script>
+
+        //MATH https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math
+        // Math.max Math.min Math.floor Math.ceil , Math.abs
+
+        //Math.random() -> me devuelve un numero aleatorio entre 0 y 1 sin incluir el 1 
+        // Math.random()*101
+
+        //break: para totalmente la estructura de flujo.
+
+        var i = 1;  //1
+        var numeroAleatorio = Math.trunc(Math.random() * 101); //7
+
+        //console.log(numeroAleatorio);
+
+        while (i <= numeroAleatorio) {
+            if (i === 10) {
+                break;
+            }
+
+            console.log(i, numeroAleatorio);
+            i++;
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

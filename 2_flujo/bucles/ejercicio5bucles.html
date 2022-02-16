@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 bucles</title>
+</head>
+
+<body>
+
+    <!--     <ul>
+        <li>5</li>
+        <li>10</li>
+        <li>20</li>
+        <li>40</li>
+        <li>80</li>
+    </ul> -->
+
+    <script>
+
+        //pedir un numero por pantalla, pintar una lista no numerada (<ul>) donde el primer elemento es el numero pedido y los 5 elementos siguientes son el doble del anterior. 
+
+        //solo puedo usar el while
+
+
+        var numero = parseInt(prompt('Dime un numero'))
+        var i = 1;
+        var contenidoHtml = "<ul>";
+
+
+        while (i <= 5) {
+            console.log(numero)
+            contenidoHtml += `<li>${numero}</li>`
+            //contenidoHtml = contenidoHtml + `<li>${numero}</li>`
+            numero = numero * 2
+            i++;
+        }
+
+        contenidoHtml += '</ul>';
+        //contenidoHtml = contenidoHtml + '</ul>';
+
+        document.write(contenidoHtml);
+
+
+
+    </script>
+
+</body>
+
+</html>

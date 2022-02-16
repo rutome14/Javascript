@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH</title>
+</head>
+
+<body>
+
+    <script>
+
+        //switch evalua cada caso devolviendo un valor en funcion de caso que cumpla. Inicialmente no evalua ninguna condicion solo la existencia del elemento, posteriormente evaluamos los casos. 
+
+        //OJO con la debida pensada un switch puede hacer como un anidado y viceversa.
+
+        //traductor
+
+        var color = prompt('dime un color en español')
+        color = color.toLowerCase();
+        console.log(color);
+
+        switch (color) {
+
+            case 'bermellon':
+            case 'rojo':
+                alert('red');
+                break;
+
+            case 'amarillo':
+                alert('yellow')
+                break;
+
+            case 'azul':
+                alert('blue')
+                break;
+
+            //secuencia de escape
+            default:
+                alert('no existe el color en diccionario')
+                break;
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

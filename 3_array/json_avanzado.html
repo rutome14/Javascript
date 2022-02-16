@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json avanzado</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        const alumno = {
+            nombre: 'Juan',
+            apellido: 'Lopez',
+            edad: 23,
+            genero: 'masculino',
+            estado: true,
+            asignaturas: ['matematicas', 'fisica', 'lengua'],
+            notas: [3, 7, 9],
+            datos: {
+                direccion: 'Calle Martinez Pollatos',
+                puerta: 5,
+                piso: 3,
+                cp: {
+                    ciudad: 'Madrid',
+                    codigo: 28013
+                }
+            },
+            mostrarNotaMedia: function () {
+                //getter
+                let suma = 0;
+                for (let nota of this.notas) {
+                    suma += nota;
+                }
+
+                return suma / this.notas.length
+
+            }
+        }
+
+        console.log(alumno.nombre) // Juan
+        console.log(alumno['genero']) //masculino
+
+        //asignaturas 
+        console.log(alumno.asignaturas[2]) //lengua
+        console.log(alumno['asignaturas'][2]) //lengua
+
+        //datos del alumno
+
+        console.log(alumno.datos.direccion)
+        console.log(alumno['datos']['direccion'])
+
+        //ciudad del alumno
+
+        console.log(alumno.datos.cp.ciudad)
+
+        console.log(alumno.mostrarNotaMedia())
+
+
+    </script>
+
+</body>
+
+</html>

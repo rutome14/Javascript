@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //crear un array de numeros vacio.
+
+        const numeros = new Array();
+
+        //meter dentro del array 10 numeros aleatorios entre 0 y 100, los numeros tiene que ser enteros 
+        //Math.random() * 101
+
+        for (let i = 0; i < 10; i++) {
+            let numeroAleatorio = parseInt(Math.random() * 101);
+            numeros[i] = numeroAleatorio;
+        }
+
+        console.log(numeros);
+        //quiero PINTAR mi array de numeros en un lista no numerada, solo quiero los numeros divisibles por 3 FILTRAR.
+
+        function pintarLista(pArray) {
+            let ul = '<ul>';
+            for (let numero of pArray) {
+                ul += `<li>${numero}</li>`;
+            }
+            ul += '</ul>';
+            document.write(ul);
+        }
+
+        function filtrarDivisibles(pArray, pNumero) {
+            const listaFiltrada = new Array();
+
+            for (let i = 0; i < pArray.length; i++) {
+                if (pArray[i] % pNumero === 0) {
+                    //aqui tengo el numero que cumple mi condicion de divisibilidad.
+                    let posicion = listaFiltrada.length;
+                    listaFiltrada[posicion] = pArray[i];
+                }
+            }
+
+            return listaFiltrada;
+
+        }
+
+        //pintarLista(filtrarDivisibles(numeros, 3)); //filtrar divisibles es callback de pintarLista
+
+        let listaDeNumerosDivisblesPor3 = filtrarDivisibles(numeros, 11);
+        pintarLista(listaDeNumerosDivisblesPor3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

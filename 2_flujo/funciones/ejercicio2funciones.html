@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //Crear un script que me permita elegir cuantos cuadrados pinto y el color de los mismos. Se podra elegir tambien el tamaño del lado de cuadrado.
+
+        //pintar 10 cuadrados 100X100 con black
+        //pintar 2 cuadrado 300x300 en color tomato
+
+
+        function pintarCuadrados(pAncho, pColor, pCantidad) {
+
+            for (var i = 1; i <= pCantidad; i++) {
+                document.write(`<div style="background-color: ${pColor}; width: ${pAncho}px; height: ${pAncho}px; margin: 10px;"></div>`)
+            }
+
+        }
+
+        var cantidad = parseInt(prompt('Cuantos cuadrados quieres'));
+        var color = prompt('Dime un color en ingles');
+        var tamano = parseInt(prompt('Dime un ancho del cuadrado'));
+
+        pintarCuadrados(tamano, color, cantidad);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

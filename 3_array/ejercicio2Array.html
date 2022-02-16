@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //pintar un listado de nombres, quiero que me mostreis por pantalla aquellos nombre que empiecen por A
+
+        // let nombre = 'Juan';
+        //nombre[0] -> 'J'
+
+        const nombres = new Array('Sarai', 'Celia', 'Antonio', 'Angel', 'Andres', 'Amalia', 'Ruben', 'Jaime', 'Julian', 'Carlos', 'Pascual', 'Isa');
+
+        const nombres2 = new Array('Camino', 'Irene', 'Aurora', 'Vanessa');
+
+        function pintarNombres(pLista) {
+            let ul = '<ul>';
+            for (let nombre of pLista) {
+                ul += `<li>${nombre}</li>`
+            }
+            ul += '</ul>'
+
+            document.write(ul);
+        }
+
+        //pintarNombres(nombres)
+
+        function filtrarListaPorLetra(pLista, pLetra) {
+            const listaFiltrada = new Array(); //0
+
+            for (let nombre of pLista) {
+                if (nombre[0].toLowerCase() === pLetra.toLowerCase()) {
+                    let posicion = listaFiltrada.length //1
+                    listaFiltrada[posicion] = nombre; //1
+                }
+            }
+            return listaFiltrada;
+            /* for (let i = 0; i < pLista.length; i++) {
+                 if (pLista[i][0].toLowerCase() === pLetra.toLowerCase()) {
+                     console.log(pLista[i])
+                 }
+             } */
+        }
+
+        let listaFiltradaPorJ = filtrarListaPorLetra(nombres, 'J');
+
+        pintarNombres(filtrarListaPorLetra(nombres2, 'a'));
+        pintarNombres(listaFiltradaPorJ)
+
+
+        // filtrarListaPorLetra
+        // filtrarListaNumeroCaracteres(pLista, 3)
+
+        // pintar aquellos nombre de 3 letras que empiecen por a
+
+        pintarNombres(filtrarListaPorLetra(filtrarListaNumeroCaracteres(nombres, 3), 'a'))
+
+
+    </script>
+
+</body>
+
+</html>

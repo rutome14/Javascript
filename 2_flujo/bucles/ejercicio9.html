@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //pedir un numero por pantalla sumarle 2 si el numero es impar mostrar el numero y si el numero es par pintar un listado desde el numero hasta 1 
+
+        var numero = parseInt(prompt('Dame un numero'));
+        var resultante = numero + 2;
+
+        if (resultante % 2 !== 0) {
+            console.log(numero)
+        } else {
+
+            for (var i = numero; i >= 1; i--) {
+                console.log(i)
+            }
+
+        }
+
+        //opcion 2
+
+        var numero = parseInt(prompt('Dame un numero'));
+        var resultante = numero + 2;
+        var listado = '<ul>';
+
+        if (resultante % 2 !== 0) {
+            console.log(numero)
+        } else {
+
+            for (var i = numero; i >= 1; i--) {
+                listado += `<li>${i}</li>`
+            }
+            listado += '</ul>'
+            document.write(listado)
+        }
+
+
+    </script>
+
+</body>
+
+</html>

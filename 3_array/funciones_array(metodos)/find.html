@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Find es un metodo que busca dentro de cualquier tipo de array. Me devuelve el primer elementos que cumpla la condicion ya  sea string numero u Json.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Ruben',
+                edad: 29
+            },
+            {
+                nombre: 'Sara',
+                edad: 19
+            },
+            {
+                nombre: 'Rodrigo',
+                edad: 9
+            }
+
+        )
+
+        let edadBusqueda = 29;
+
+
+        const alumnoEncontrado = listaAlumnos.find(alumno => alumno.edad === edadBusqueda);
+
+        console.log(alumnoEncontrado)
+
+
+    </script>
+
+</body>
+
+</html>
