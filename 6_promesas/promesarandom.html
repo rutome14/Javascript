@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Pasados dos segundos, recuperar un número aleatorio. Si el número aleatorio es mayor de 0.6 la promesa se resuelve correctamente. Si no, se resuelve de manera erronea
+
+        // Creación de la promesa
+        const promRandom = new Promise((resolve, reject) => {
+            // Generamos una promesa cuando queremos lanzar una ejecución que dura más de lo habitual
+            setTimeout(() => {
+                const num = Math.random();
+                if (num > 0.5) {
+                    // Resolución positiva de la promesa
+                    resolve();
+                } else {
+                    // Resolución negativa de la promesa
+                    reject();
+                }
+            }, 2000);
+        });
+
+        // Consumir promesa
+        console.log(promRandom);
+        promRandom
+            .then((num) => {
+                console.log('El número es mayor de 0.5 ' + num);
+            })
+            .catch(() => {
+                console.log('El número es menor de 0.5');
+            });
+
+    </script>
+</body>
+
+</html>

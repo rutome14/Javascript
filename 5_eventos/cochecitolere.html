@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        figure img {
+            width: 150px;
+            transform: rotate(180deg);
+            transition: margin-left 0.5s, margin-top 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>IZQUIERDA</button><button>DERECHA</button>
+    <button>ARRIBA</button><button>ABAJO</button>
+    <hr>
+
+    <figure>
+        <img src="https://www.deividart.com/libres/zycars-coche_camaro-2.png">
+    </figure>
+
+
+    <script>
+
+        const buttons = document.querySelectorAll('button');
+        const coche = document.querySelector('figure img');
+        let avanceX = 0;
+        let avanceY = 0;
+
+        for (let button of buttons) {
+            button.addEventListener('click', mover)
+        }
+
+        function mover(event) {
+
+            let textoBtn = event.target.innerText;
+
+            if (textoBtn === 'DERECHA') {
+                moverCocheHorizontal(20, 180)
+            } else if (textoBtn === 'IZQUIERDA') {
+                moverCocheHorizontal(-20, 0)
+            } else if (textoBtn === 'ABAJO') {
+                moverCocheVertical(20, 270)
+            } else if (textoBtn === 'ARRIBA') {
+                moverCocheVertical(-20, 90)
+            }
+
+        }
+
+        function moverCocheHorizontal(pVelocidad, pGrados) {
+            avanceX = avanceX + pVelocidad;
+            coche.style.marginLeft = avanceX + 'px';
+            coche.style.transform = `rotate(${pGrados}deg)`;
+        }
+
+        function moverCocheVertical(pVelocidad, pGrados) {
+            avanceY = avanceY + pVelocidad;
+            coche.style.marginTop = avanceY + 'px';
+            coche.style.transform = `rotate(${pGrados}deg)`;
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

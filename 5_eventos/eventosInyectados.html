@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Inyectados</title>
+</head>
+
+<body>
+
+    <ul>
+        <li id="red" onclick="cambiarFondo(this)">Rojo</li>
+        <li id="green" onclick="cambiarFondo(this)">Verde</li>
+        <li id="blue" onclick="cambiarFondo(this)">Azul</li>
+        <li id="tomato" onclick="cambiarFondo(this)">Tomate</li>
+    </ul>
+
+
+
+    <script>
+
+        function cambiarFondo(pObjDom) {
+            const body = document.body;
+            body.style.backgroundColor = pObjDom.id;
+            pObjDom.style.marginLeft = '200px';
+            pObjDom.style.color = "white"
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

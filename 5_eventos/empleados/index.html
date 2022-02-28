@@ -1,0 +1,62 @@
+<!-- Dentro del HTML la generación de una página con un formulario (<form>). 
+Dentro del formulario los campos: nombre, email, salario
+Además, un campo de tipo submit
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/modelo.js"></script>
+</head>
+
+<body>
+    <main>
+        <section class="formulario">
+            <form action="">
+                <div>
+                    <label>Nombre</label>
+                    <input type="text" id="inputNombre">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" id="inputEmail">
+                </div>
+                <div>
+                    <label>Salario</label>
+                    <input type="text" id="inputSalario">
+                </div>
+                <div>
+                    <label>Departamento</label>
+                    <input type="text" id="inputDepartamento">
+                </div>
+                <input type="submit" value="Enviar" id="btnSubmit">
+            </form>
+        </section>
+        <section>
+            <select id="selectDepartamento">
+                <option value="contabilidad">Contabilidad 🧮</option>
+                <option value="desarrollo">Desarrollo 🖥</option>
+                <option value="marketing">Marketing 📊</option>
+            </select>
+
+            <h2>Lista</h2>
+        </section>
+        <section class="listaEmpleados">
+
+            <!-- <div class="empleado">
+                <h3>NOMBRE</h3>
+                <p>EMAIL</p>
+                <p>SALARIO</p>
+            </div> -->
+
+        </section>
+    </main>
+    <script src="./js/vista.js"></script>
+</body>
+
+</html>

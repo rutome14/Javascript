@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector</title>
+</head>
+
+<body>
+
+    <span>Hola</span>
+    <div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+    </div>
+
+    <div id="cuadrado"></div>
+
+    <script>
+
+        //querySelector me permite capturar cualquier objeto de DOM en una variable javascript. El metodo de captura de dicho objeto es similar al que utilizamos con herencia en css.
+
+        //querySelector me selecciona el primer elemento que cumpla dicha herencia de css. NO devuelve un array devuelve un objeto del DOM.
+
+
+        //capturar el primer menu y insertarle un texto
+
+        const menu1 = document.querySelector('.menu');
+        console.log(menu1)
+        menu1.innerText = 'Menu1';
+
+        //capturar el menu2 y insertar un texto
+
+        const menu2 = document.querySelector('.menu:nth-child(2)');
+        menu2.innerText = 'Menu2'
+
+
+        const menu3 = document.querySelector('.menu:last-child');
+        menu3.innerText = 'Menu ultimo'
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+
+<body>
+    <!-- p*10{item $} -->
+    <p class="impar">Item 1</p>
+    <p class="par">Item 2</p>
+    <p class="impar">Item 3</p>
+    <p class="par">Item 4</p>
+    <p class="impar">Item 5</p>
+    <p class="par">Item 6</p>
+    <p class="impar">Item 7</p>
+    <p class="par">Item 8</p>
+    <p class="impar">Item 9</p>
+    <p class="par">Item 10</p>
+
+
+    <script>
+
+        const todosLosParrafos = document.getElementsByTagName('p');
+
+        //todos los parrafos impares
+
+        const impares = document.getElementsByClassName('impar');
+
+        impares[1].innerText = "Soy un impar"
+
+        //quiero que recojais todos los pares y les modifiques el texto -> Item 2 par
+
+        const pares = document.getElementsByClassName('par');
+
+
+        for (let par of pares) {
+            par.innerText += ' par';
+        }
+
+        /* for (let i = 0; i < pares.length; i++) {
+             pares[i].innerText += " par"
+         } */
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

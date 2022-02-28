@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear objetos DOM</title>
+</head>
+
+<body>
+
+    <section id="frases">
+        <!--   <article>
+            <h3>Solo se que no se nada</h3>
+            <p>Autor: Descartes</p>
+            <hr>
+        </article> -->
+    </section>
+
+
+    <script>
+
+        const frases = new Array(
+            {
+                id: 1,
+                frase: 'Solo se que no se nada',
+                autor: 'Socrates'
+            },
+            {
+                id: 2,
+                frase: 'Yo no perteneceria a ningun club que me admitiera como socio',
+                autor: 'Marx'
+            },
+            {
+                id: 3,
+                frase: 'Eres un fristo pecadorrrrr',
+                autor: 'Chiquito de la calzada'
+            },
+        )
+
+        //capturar la seccion donde tengo las pintar las frases
+
+        const sectionFrases = document.querySelector('#frases');
+
+        //pintar las frases dentro de la seccion
+
+        function pintarFrases(pListaFrases, pSection) {
+            pListaFrases.forEach(frase => pintarUnaFrase(frase, pSection))
+        }
+
+        function pintarUnaFrase(pFrase, pSection) {
+
+            //vamos crear primero la etiquetas
+            let article = document.createElement('article'); //<article></article>
+            let h3 = document.createElement('h3') //<h3></h3>
+            let p = document.createElement('p'); //<p></p>
+            let hr = document.createElement('hr'); //<hr>
+
+            article.id = 'frase_' + pFrase.id;
+            h3.style.backgroundColor = 'tomato';
+            h3.style.padding = '10px';
+            //contenidos - creo el contenido y lo tiro dentro sus etiquetas
+            //opcion1 - creando los nodos texto
+            let contentH3 = document.createTextNode(pFrase.frase); // Solo se que no se nada
+            h3.appendChild(contentH3) // <h3>Solo se que no se nada</h3>
+
+            //opcion 2 - innerText o innerHTML por que ahorra un paso
+            p.innerText = `Autor: ${pFrase.autor}`; //<p>Autor: Socrates</p>
+
+            //tiro dentro del article todos los elementos, ojo tiene que tirarse en orden.
+
+            article.appendChild(h3); // <article> <h3>Solo se que no se nada</h3></article>
+            article.appendChild(p);  // <article> <h3>Solo se que no se nada</h3> <p>Autor: Socrates</p></article>
+            article.appendChild(hr) // <article> <h3>Solo se que no se nada</h3> <p>Autor: Socrates</p><hr></article>
+
+            pSection.appendChild(article)
+        }
+
+        pintarFrases(frases, sectionFrases)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

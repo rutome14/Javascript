@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar elementos del DOM</title>
+</head>
+
+<body>
+
+    <ul class="listacompra">
+
+    </ul>
+
+
+
+    <script>
+
+        const compra = new Array('Carne', 'Pescado', 'Leche', 'Judias', 'Tomates', 'Pan');
+        let contador = 1;
+        //capturar los elementos con los que interactuamos
+        const sectionListaCompra = document.querySelector('.listacompra');
+
+        function printList(pList, pSection) {
+            pList.forEach(elemento => printOneElement(elemento, pSection))
+        }
+
+        function printOneElement(pElement, pSection) {
+            let li = document.createElement('li'); // <li></li>
+            let contentLi = document.createTextNode(pElement) // Carne
+            li.appendChild(contentLi) // <li>Carne</li>
+            li.id = 'item_' + contador;
+            pSection.appendChild(li) // <ul class="listacompra"><li>carne</li></ul>
+            contador++;
+        }
+
+        printList(compra, sectionListaCompra)
+
+
+        function borrarElement(pNumLi) {
+            //borrar elemento tiene dos partes primero capturar el elemento y segundo eleminarlo
+            //2 opciones de captura por id o por nth-child()
+
+            //opcion 1 por id
+            // let itemBorrar = document.querySelector('#item_' + pNumLi)
+
+            //opcion 2 por nth-child
+            let itemBorrar = document.querySelector(`.listacompra li:nth-child(${pNumLi})`)
+
+            //para borrar un item es absolutamente necesario conocer el contenedor de dicho item. Pero ojo muchas no vamos a poder saber a ciencia cierta quien mi contenedor.
+
+            itemBorrar.parentNode.removeChild(itemBorrar)
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

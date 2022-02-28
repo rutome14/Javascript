@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listeners</title>
+</head>
+
+<body>
+
+    <ul>
+        <li id="red">Rojo</li>
+        <li id="green">Verde</li>
+        <li id="blue">Azul</li>
+        <li id="tomato">Tomate</li>
+    </ul>
+
+
+    <script>
+
+        //capturar todos los enlaces.
+
+        let lis = document.querySelectorAll('ul li');
+
+        for (let li of lis) {
+            //funcion de listener se llama event handler es un funcion que solo recibe un evento como parametro.
+            li.addEventListener('click', cambiarFondo);
+        }
+
+
+        function cambiarFondo(event) {
+            //event.target representa del evento que lanzo en este caso click, el objeto que toco en este caso li.
+            console.log(event.target.id);
+            const body = document.body;
+            body.style.backgroundColor = event.target.id
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

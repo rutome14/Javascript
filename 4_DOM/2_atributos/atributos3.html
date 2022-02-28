@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos 3 - modificacion de estilos</title>
+</head>
+
+<body>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aut provident expedita. Doloribus, error. Enim
+        sit et optio asperiores repudiandae autem commodi beatae iusto! Obcaecati sequi reiciendis eaque illo odio!
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda deserunt doloremque quo nostrum optio atque
+        ad aperiam. Inventore numquam, nesciunt sequi obcaecati voluptates esse quidem dolorem officia rem eius? Eos.
+    </p>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis autem maxime non sunt. Fugiat, ipsam, et quia
+        illum laudantium, saepe labore minus modi facilis facere nisi iusto quos laboriosam autem.
+    </p>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente debitis eius, veniam ex aperiam tenetur est
+        quod qui perferendis cupiditate doloremque nulla facere voluptate, inventore voluptatibus alias corporis iure
+        mollitia?
+    </p>
+
+
+    <script>
+
+        //quiero pintar los parrafos pares de fondo negro y texto blanco y los impartes de color blanco y texto negro.
+        //Ambos tipos de parrafo tendra 10px de padding
+
+
+        const parrafos = document.querySelectorAll('p');
+        //forEach recibe dos parametros el primero obligatorio que es el item que recorro, segundo optativo que es indice o index.
+        parrafos.forEach((parrafo, index) => {
+            if (index % 2 !== 0) {
+                parrafo.style.backgroundColor = 'black';
+                parrafo.style.color = 'white';
+            }
+            parrafo.style.padding = '10px';
+            parrafo.style.margin = '10px';
+        })
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

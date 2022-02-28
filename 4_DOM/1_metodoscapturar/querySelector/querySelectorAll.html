@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <!-- ul>li*3>a{item $} -->
+    <ul class="menu">
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 3</a></li>
+    </ul>
+
+    <a href="">Otro enlace</a>
+
+    <script>
+
+        //querySelectorAll me permite seleccionar todos los elementos de una lista de nodos o etiquetas que cumplan la condicion css entre parentesis.
+
+        //querySelectorAll me devuelve un array de NODOS, los get me devolvian un HTMLColletion la diferencia es que el array de nodos tiene metodos de array como por ejmplo foreach
+
+
+        //coger todos los los a que hay dentro de menu y cambiar el texto.
+
+        const enlaces = document.querySelectorAll('.menu li a');
+
+        for (let enlace of enlaces) {
+            enlace.innerText = 'Que dura es la vida del innerText'
+        }
+
+        //opcion 2
+        enlaces.forEach(enlace => enlace.innerText = "Lo he cambiado con arrow funtion")
+
+
+    </script>
+
+
+
+</body>
+
+</html>

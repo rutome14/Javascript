@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+
+<body>
+
+    <section id="aboutus">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis minus quisquam qui incidunt modi
+            accusamus similique culpa voluptate velit, eum animi iure expedita! Nulla veniam facere reprehenderit
+            dolorem voluptas quibusdam.</p>
+    </section>
+
+
+    <section id="ourservices">
+        <h2>Services</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat consequuntur facere nesciunt, sit enim
+            accusamus tenetur repellendus magni rem molestiae voluptates inventore ratione ab nemo asperiores minus
+            dolorum blanditiis delectus.</p>
+    </section>
+
+    <script>
+
+        //quiero modicar el texto del parrafo de la seccion servicios.
+
+        const sectionServices = document.getElementById('ourservices');
+
+        console.log(sectionServices);
+
+        //captura solo los parrafos de la seccion servicios
+        let parrafos = sectionServices.getElementsByTagName('p');
+
+        console.log(parrafos)
+
+        parrafos[0].innerText = 'Carlos me tienes frito'
+
+    </script>
+
+</body>
+
+</html>

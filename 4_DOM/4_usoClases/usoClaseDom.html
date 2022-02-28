@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de clases en el DOM</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            transition: 1s;
+        }
+
+        .red {
+            background-color: tomato;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .tamano {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadrado red"></div>
+
+
+    <script>
+
+        const cuadrado = document.querySelector('.cuadrado');
+
+        //metodo antiguo usando modificiacion de atributo
+
+        cuadrado.className = "cuadrado green"
+        console.log(cuadrado.className)
+
+        //metodo classList -> me crear un array de clases
+
+        console.log(cuadrado.classList)
+        //classList es de solo lectura eso me protege de borrarlas accidentalmente.
+
+        //cuadrado.classList[1] = 'blue' ERROR
+
+        //pero classList me ofrece una serie de metodos (funciones) para trabajar con una lista de clases.
+
+        //añadir una clase
+        let clase = 'Tamano';
+        cuadrado.classList.add(clase.toLowerCase());
+
+        //borrar una clase del classList
+        cuadrado.classList.remove('tamano');
+
+        //cambiar una clase por otra. Es decir una clase que esta la cambio por otra que no esta
+        cuadrado.classList.replace('green', 'blue')
+
+        //toggle, lo que hace metodo es si exite la clase la elimina y si no la pone
+
+        function cambiarClase() {
+            cuadrado.classList.toggle('tamano');
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

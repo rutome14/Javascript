@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos del DOM</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="http://amazon.es">Amazon</a></li>
+        <li><a href="http://google.es">Google</a></li>
+        <li><a href="http://yahoo.es">Yahoo</a></li>
+    </ul>
+
+
+    <script>
+
+        //quiero es que cuando pulse en un enlace me lleve a otra direccion que no es la que tiene el enlace.
+
+        const enlaces = document.querySelectorAll('#menu a');
+
+        for (let enlace of enlaces) {
+            //console.log(enlace)
+            enlace.href = "http://www.estudioclandestino.es";
+            enlace.target = '_blank';
+            enlace.title = 'Estudio clandestino donde trabaja el mejor profe del mundo'
+        }
+
+
+    </script>
+
+</body>
+
+</html>

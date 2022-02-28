@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // setInterval | setTimeout
+        // setTimeout(() => {
+        //     console.log('SETTIMEOUT');
+        // }, 3000);
+
+        // setTimeout(() => {
+        //     console.log('SETTIMEOUT 2');
+        // }, 1000);
+
+        // console.log('OTRO');
+
+        // function sumar(a, b) {
+        //     let res = 0;
+        //     setTimeout(() => {
+        //         res = a + b;
+        //     }, 3000);
+        //     return res;
+        // }
+
+        // const res = sumar(3, 8);
+        // console.log(res);
+
+        // Sintáxis
+
+        // const prom = new Promise((resolve, reject)=>{});
+
+        // Creación de la promesa
+        function sumaR(a, b) {
+            const prom = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(a + b);
+                }, 3000);
+            });
+            return prom;
+        }
+
+        // Consumir la promesa
+        sumaR(4, 9).then((res) => {
+            // Definición de la función resolve
+            console.log(res);
+        });
+
+
+    </script>
+</body>
+
+</html>

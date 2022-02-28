@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+
+<body>
+
+    <p><strong>Juan</strong></p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+
+    <div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente at, beatae molestiae perferendis
+            recusandae quibusdam earum fugit libero voluptates iusto placeat magnam dicta maiores! Possimus aliquam ex
+            cumque aut ab.</p>
+    </div>
+
+
+
+
+    <script>
+
+        const parrafos = document.getElementsByTagName('p');
+        //vais a recibir una lista html de elementos que es casi un array.
+        //console.log(parrafos)
+        parrafos[3].innerText = "Rocio"
+        parrafos[1].innerHTML = "<strong>Bienvenidos</strong> a la bootcamp"
+
+
+        for (let parrafo of parrafos) {
+            parrafo.innerText = 'Juan';
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
